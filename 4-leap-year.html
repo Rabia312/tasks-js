@@ -8,27 +8,19 @@
 <body>
 
     <script>
-    a = Number(prompt("Введите год "))
+    year = Number(prompt("Введите год "));
 
-if ((a >= 1900) && (a <= 3000)){
-    
-    if ((a % 4 == 0) && (a % 100 != 0) || (a % 400 == 0)){
-        alert("это високосный год")
-
-    } else {
-        alert("это обычный год")
-    }
-
-} else
-
-if (a < 1900 || a > 3000){
-    alert("Введите год от 1900 до 3000")
-} else
-if (typeof a !== Number){
-    alert("Введите цифры пожалуйста")
-}
-
-    
+    if ((year >= 1900) && (year <= 3000)){    
+        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
+            alert("это високосный год");
+        } else {
+            alert("это обычный год");
+        }
+    } else if (year < 1900 || year > 3000){
+        alert("Введите год от 1900 до 3000");
+    } else if (typeof year !== Number){
+        alert("Введите цифры пожалуйста");
+    }    
     </script>
 </body>
 </html>
