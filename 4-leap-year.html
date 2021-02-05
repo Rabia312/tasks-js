@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Високосный год</title>
 </head>
+
 <body>
 
     <script>
-    year = Number(prompt("Введите год "));
+        year = Number(prompt("Введите год "));
 
-    if ((year >= 1900) && (year <= 3000)){    
-        if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0)){
-            alert("это високосный год");
+        if ((year >= 1900) && (year <= 3000)) {
+            if ((year % 4 === 0) && (year % 100 !== 0) || (year % 400 === 0)) {
+                alert("это високосный год");
+            } else {
+                alert("это обычный год");
+            }
+        } else if (year < 1900 || year > 3000) {
+            alert("Введите год от 1900 до 3000");
         } else {
-            alert("это обычный год");
-        }
-    } else if (year < 1900 || year > 3000){
-        alert("Введите год от 1900 до 3000");
-    } else if (typeof year !== Number){
-        alert("Введите цифры пожалуйста");
-    }    
+            alert("Введите цифры пожалуйста");
+        }    
     </script>
 </body>
+
 </html>
