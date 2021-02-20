@@ -8,20 +8,20 @@
 </head>
 <body>
     <script>
-            const A = Number(prompt("A ="));
-            const B = Number(prompt("B ="));
-            const H = Number(prompt("H ="));
-            if (A <= B) {
-                if (H < A) {
+        const A = Number(prompt("A ="));
+        const B = Number(prompt("B ="));
+        const H = Number(prompt("H ="));
+        if (A <= B) {
+            if (H < A) {
                 alert('Недосып')
-                } else if (H > B) {
+            } else if (H > B) {
                 alert('Пересып')
-                } else {
-                    alert('Это нормально')
-                }
             } else {
-                alert("A > B")
+                alert('Это нормально')
             }
+        } else {
+            alert("A > B")
+        }
     </script>
 </body>
 </html>
