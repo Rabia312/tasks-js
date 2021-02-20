@@ -8,15 +8,17 @@
 </head>
 <body>
     <script>
-            A = Number(prompt("A ="));
-            B = Number(prompt("B ="));
-            H = Number(prompt("H ="));
-            if ((H >= A) && (H < B) && (A <= B)) {
-                alert('Это нормально')
-            } else if ((H < A) && (A <= B)) {
+            const A = Number(prompt("A ="));
+            const B = Number(prompt("B ="));
+            const H = Number(prompt("H ="));
+            if (A <= B) {
+                if (H < A) {
                 alert('Недосып')
-            } else if ((H > B) && (A <= B)) {
+                } else if (H > B) {
                 alert('Пересып')
+                } else {
+                    alert('Это нормально')
+                }
             } else {
                 alert("A > B")
             }
