@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Счастливый билет</title>
+</head>
+<body>
+    <script>
+        let numbers = prompt("Введите, пожалуйста, 6-значные цифры билета");
+        let sum1 = Number(numbers[0]) + Number(numbers[1]) + Number(numbers[2]);
+        let sum2 = Number(numbers[3]) + Number(numbers[4]) + Number(numbers[5]);
+        
+        if (sum1 === sum2) {
+            alert("Счастливый");
+        } else {
+            alert("Обычный");
+        }
+    </script>
+    
+</body>
+</html>
