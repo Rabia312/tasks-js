@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let room = (prompt("Введите фигуру"));
+        const p = 3.14
+
+        if (room === "треугольник") {
+            let a = Number(prompt("a = "));
+            let b = Number(prompt("b = "));
+            let c = Number(prompt("c = "));
+            let per = (a + b + c)/2
+            let s = (per * (per - a) * (per - b) * (per - c)) ** 0.5
+        } else if (room === "прямоугольник") {
+            a = Number(prompt("a = "));
+            b = Number(prompt("b = "));
+            let s = a * b
+        } else if (room === "круг") {
+            let r = Number(prompt("r ="))
+            let s = p * r ** 2
+        } else {
+            alert("Введите правильную фигуру, пожалуйста");
+        }
+        alert(s)
+    </script>
+</body>
+</html>
