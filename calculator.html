@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+</head>
+<body>
+    <script>
+        let a = Number(prompt("a = "));
+        let b = Number(prompt("b = "));
+        let s = prompt("Знак (+,-,*,/, div, mod, pow): ", "+,-,*,/, div, mod, pow");
+
+        if (s == "+") {
+            let res = a + b; 
+                alert(res);           
+        } else if (s == "-") {
+            let res = a - b;
+                alert(res);
+        } else if (s == "*") {
+            let res = a * b;
+                alert(res);
+        } else if (s == "pow") {
+            let res = a ** b;
+                alert(res);
+        } else if (s == "/") {
+            if (b == 0) {
+                alert("деление на ноль!");
+            } else {
+                let res = a / b;
+                alert(res);
+            }
+        } else if (s == "mod") {
+            if (b == 0.0) {
+                alert("деление на ноль!");
+            } else  {
+                let res = a % b;
+                alert(res);
+            }
+        } else if (s == "div") {
+            if (b == 0.0) {
+                alert("деление на ноль!");
+            } else  {
+                let res = (a - a % b) / b;
+                alert(res);
+            }
+        } else {
+            alert("Введите правильную операцию, пожалуйста");
+        };      
+    </script>
+</body>
+</html>
