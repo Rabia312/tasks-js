@@ -8,46 +8,32 @@
 </head>
 <body>
     <script>
-        let a = Number(prompt("a = "));
-        let b = Number(prompt("b = "));
-        let s = prompt("Знак (+,-,*,/, div, mod, pow): ", "+,-,*,/, div, mod, pow");
+        const a = Number(prompt("a = "));
+        const b = Number(prompt("b = "));
+        const operator = prompt("Знак (+,-,*,/, div, mod, pow): ", "+,-,*,/, div, mod, pow");
+        let res;
 
-        if (s == "+") {
-            let res = a + b; 
-                alert(res);           
-        } else if (s == "-") {
-            let res = a - b;
-                alert(res);
-        } else if (s == "*") {
-            let res = a * b;
-                alert(res);
-        } else if (s == "pow") {
-            let res = a ** b;
-                alert(res);
-        } else if (s == "/") {
-            if (b == 0) {
-                alert("деление на ноль!");
-            } else {
-                let res = a / b;
-                alert(res);
-            }
-        } else if (s == "mod") {
-            if (b == 0.0) {
-                alert("деление на ноль!");
-            } else  {
-                let res = a % b;
-                alert(res);
-            }
-        } else if (s == "div") {
-            if (b == 0.0) {
-                alert("деление на ноль!");
-            } else  {
+        if (operator === "+") {
+            res = a + b; 
+        } else if (operator === "-") {
+            res = a - b;
+        } else if (operator === "*") {
+            res = a * b;
+        } else if (operator === "pow") {
+            res = a ** b;
+        } else if ((b === 0) && (operator === "/" || operator === "mod" || operator === "div")) {
+                alert("деление на ноль!");        
+            } else if (operator === "/") {            
+                    res = a / b;            
+            } else if (operator === "mod") {           
+                    res = a % b;            
+            } else if (operator === "div") {
                 let res = (a - a % b) / b;
-                alert(res);
-            }
         } else {
             alert("Введите правильную операцию, пожалуйста");
-        };      
+        };  
+            
+        alert(res)
     </script>
 </body>
 </html>
